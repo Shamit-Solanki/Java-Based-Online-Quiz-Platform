@@ -1,9 +1,9 @@
 <%@ include file="/WEB-INF/jspf/public-header.jspf" %>
 <div class="landing">
   <div class="landing-hero">
-    <span class="kicker">☕ Built for Java learners</span>
-    <h1>Master Java, one timed quiz at a time.</h1>
-    <p>Create quizzes, take them under the clock, and see exactly where you stand &mdash; with instant scoring, detailed reports and a live leaderboard.</p>
+    <span class="kicker">🎯 The Ultimate Quiz Experience</span>
+    <h1>Challenge yourself with timed quizzes on any topic.</h1>
+    <p>Create custom quizzes, test your knowledge under the clock, and see exactly where you stand &mdash; with instant scoring, detailed reports, and a live leaderboard.</p>
     <div class="btn-row" style="justify-content:center">
       <a class="btn lg" href="${ctx}/login">Sign in</a>
       <a class="btn lg ghost" href="${ctx}/register">Create a free account</a>

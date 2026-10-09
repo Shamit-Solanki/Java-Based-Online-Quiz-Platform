@@ -1,9 +1,9 @@
 <%@ include file="/WEB-INF/jspf/public-header.jspf" %>
 <div class="auth-wrap">
   <div class="auth-side">
-    <a class="brand" href="${ctx}/"><span class="brand-mark">&lt;/&gt;</span><span>JavaQuiz Arena</span></a>
+    <a class="brand" href="${ctx}/"><span class="brand-mark">QM</span><span>QuizMania</span></a>
     <div>
-      <h2>Timed Java quizzes with instant, detailed feedback.</h2>
+      <h2>Interactive timed quizzes with instant, detailed feedback.</h2>
       <p>Sign in to pick up where you left off.</p>
       <ul>
         <li>⏱ Server-enforced timers, no cheating the clock</li>

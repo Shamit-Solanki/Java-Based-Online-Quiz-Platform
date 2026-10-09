@@ -17,7 +17,7 @@ public final class AppSettings {
 
     /** All known settings with their defaults, in display order. */
     private static final List<SettingDef> DEFINITIONS = List.of(
-            new SettingDef("platform_name", "Platform name", "Shown in the header and on the login page.", "text", "JavaQuiz Arena"),
+            new SettingDef("platform_name", "Platform name", "Shown in the header and on the login page.", "text", "QuizMania"),
             new SettingDef("allow_registration", "Allow public sign-up", "Let new participants create their own account.", "boolean", "true"),
             new SettingDef("max_attempts", "Max attempts per quiz", "How many times one participant may take the same quiz.", "number", "3"),
             new SettingDef("default_duration", "Default quiz duration (min)", "Pre-filled when a creator makes a new quiz.", "number", "15"),

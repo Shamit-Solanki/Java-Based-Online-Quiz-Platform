@@ -1,4 +1,4 @@
-/* JavaQuiz Arena - shared UI behaviour (no dependencies) */
+/* QuizMania - shared UI behaviour (no dependencies) */
 (function () {
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };

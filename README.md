@@ -1,6 +1,6 @@
-# JavaQuiz Arena
+# QuizMania
 
-A full-stack, Java Web-based online quiz platform for Java programming practice — timed
+A full-stack, Java Web-based online quiz platform for any topic — timed
 quizzes, automatic scoring, detailed performance reports, a moderation workflow, messaging,
 reminders and a leaderboard. Built with Java 17, Servlets 6, JSP/JSTL, JDBC and MySQL 8.
 

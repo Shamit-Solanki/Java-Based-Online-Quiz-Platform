@@ -1,5 +1,5 @@
 -- =====================================================================
---  JavaQuiz Arena - database schema (MySQL 8+)
+--  QuizMania - database schema (MySQL 8+)
 --  Run this first, then database/sample-data.sql
 -- =====================================================================
 CREATE DATABASE IF NOT EXISTS online_quiz

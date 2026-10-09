@@ -1,5 +1,5 @@
 -- =====================================================================
---  JavaQuiz Arena - sample data (generated; run AFTER schema.sql)
+--  QuizMania - sample data (generated; run AFTER schema.sql)
 --
 --  Demo accounts
 --    Admin        admin@quiz.com        / admin123
@@ -218,9 +218,9 @@ INSERT INTO reminders(participant_id,quiz_id,remind_at,note,notified) VALUES
 (4,4,NOW() - INTERVAL 1 MINUTE,'Due now - the scheduler will turn this into a notification',0);
 
 INSERT INTO system_settings(setting_key,setting_value) VALUES
-('platform_name','JavaQuiz Arena'),
+('platform_name','QuizMania'),
 ('allow_registration','true'),
 ('max_attempts','3'),
 ('default_duration','15'),
 ('pass_percentage','40'),
-('announcement','Welcome to JavaQuiz Arena - good luck with your quizzes!');
+('announcement','Welcome to QuizMania - test your knowledge and climb the leaderboard!');

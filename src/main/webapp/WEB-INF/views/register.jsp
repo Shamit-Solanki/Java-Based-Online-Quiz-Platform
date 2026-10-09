@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jspf/public-header.jspf" %>
 <div class="auth-wrap">
   <div class="auth-side">
-    <a class="brand" href="${ctx}/"><span class="brand-mark">&lt;/&gt;</span><span>JavaQuiz Arena</span></a>
+    <a class="brand" href="${ctx}/"><span class="brand-mark">QM</span><span>QuizMania</span></a>
     <div>
       <h2>Join as a participant and start practising today.</h2>
       <p>Free, no credit card, cancel any time.</p>

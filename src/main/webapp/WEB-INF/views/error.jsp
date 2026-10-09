@@ -3,7 +3,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <c:set var="code" value="${pageContext.errorData.statusCode}"/>
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${empty code ? 'Error' : code} · JavaQuiz Arena</title>
+<title>${empty code ? 'Error' : code} · QuizMania</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 <link rel="stylesheet" href="${ctx}/css/style.css"></head>
 <body class="public"><div class="card pad-l error-page" style="max-width:460px">

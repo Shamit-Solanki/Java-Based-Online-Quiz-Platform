@@ -4,7 +4,7 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-    <display-name>JavaQuiz Arena</display-name>
+    <display-name>QuizMania</display-name>
 
     <!-- 1) every request: login check, CSRF token, no-cache headers -->
     <filter>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title><c:out value="${quiz.title}"/> · JavaQuiz Arena</title>
+<title><c:out value="${quiz.title}"/> · QuizMania</title>
 <meta name="csrf" content="<c:out value='${sessionScope.csrf}'/>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
 <link rel="stylesheet" href="${ctx}/css/style.css">
