@@ -1,0 +1,23 @@
+<%-- Expects request attribute "details" (List<AnswerDetail>). Shared by the participant report and creator review. --%>
+<div class="answers">
+<c:forEach var="d" items="${details}">
+  <article class="answer ${!d.answered ? 'skipped' : (d.correct ? 'right' : 'wrong')}">
+    <header>
+      <span class="qnum">Q${d.number}</span>
+      <span class="badge ${!d.answered ? 'neutral' : (d.correct ? 'success' : 'danger')}">${!d.answered ? 'Skipped' : (d.correct ? 'Correct' : 'Incorrect')}</span>
+    </header>
+    <h3><c:out value="${d.question.questionText}"/></h3>
+    <ul class="opts">
+      <c:forEach var="L" items="${['A','B','C','D']}">
+        <li class="${L == d.question.correctOption ? 'is-correct' : ''} ${L == d.selectedOption && !d.correct ? 'is-picked-wrong' : ''}">
+          <b>${L}</b><span><c:out value="${d.question.getOption(L)}"/></span>
+          <c:if test="${L == d.question.correctOption}"><em>✓ correct answer</em></c:if>
+          <c:if test="${L == d.selectedOption && !d.correct}"><em>your answer</em></c:if>
+          <c:if test="${L == d.selectedOption && d.correct}"><em>your answer</em></c:if>
+        </li>
+      </c:forEach>
+    </ul>
+    <c:if test="${not empty d.question.explanation}"><p class="why">💡 <c:out value="${d.question.explanation}"/></p></c:if>
+  </article>
+</c:forEach>
+</div>

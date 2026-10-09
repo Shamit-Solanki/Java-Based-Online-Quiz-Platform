@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>JavaQuiz Arena</display-name>
+
+    <!-- 1) every request: login check, CSRF token, no-cache headers -->
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.quiz.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 2) role based access for the three areas -->
+    <filter>
+        <filter-name>RoleFilter</filter-name>
+        <filter-class>com.quiz.filter.RoleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/creator/*</url-pattern>
+        <url-pattern>/participant/*</url-pattern>
+    </filter-mapping>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <url-pattern>*.jspf</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+    </session-config>
+
+    <error-page><error-code>403</error-code><location>/WEB-INF/views/error.jsp</location></error-page>
+    <error-page><error-code>404</error-code><location>/WEB-INF/views/error.jsp</location></error-page>
+    <error-page><error-code>405</error-code><location>/WEB-INF/views/error.jsp</location></error-page>
+    <error-page><error-code>500</error-code><location>/WEB-INF/views/error.jsp</location></error-page>
+    <error-page><exception-type>java.lang.Throwable</exception-type><location>/WEB-INF/views/error.jsp</location></error-page>
+</web-app>

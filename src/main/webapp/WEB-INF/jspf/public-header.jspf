@@ -1,0 +1,20 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" isErrorPage="false" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="fn" uri="jakarta.tags.functions" %>
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><c:out value="${pageTitle}"/> · <c:out value="${empty platformName ? 'JavaQuiz Arena' : platformName}"/></title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="${ctx}/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body class="public">
+<c:if test="${not empty sessionScope.flash}">
+  <div class="flash-data" data-type="${sessionScope.flash[0]}" data-text="<c:out value='${sessionScope.flash[1]}'/>" hidden></div>
+  <c:remove var="flash" scope="session"/>
+</c:if>
